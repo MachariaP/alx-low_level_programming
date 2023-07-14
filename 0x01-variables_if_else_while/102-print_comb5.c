@@ -1,39 +1,34 @@
 #include <stdio.h>
-#include <time.h>
-#include <stddef.h>
+
 /**
- *main - entrypoint for prints all possible different combination of two digits
-*Return: Always 0 (Success)
-*/
+ *main - Prints all possible combinations of two two-digit numbers,
+ *        ranging from 0-99, separated by a comma followed by a space.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-int a = 0;
-int b;
-int c;
-while (a < 10)
+int i, j;
+
+for (i = 0; i < 100; i++)
 {
-b = 0;
-while (b < 10)
+for (j = 0; j < 100; j++)
 {
-c = 0;
-while (c < 10)
+if (i < j)
 {
-if ((!(a == b || b == c || a == c))&&(a < b && b < c))
-{
-putchar('0' + a);
-putchar('0' + b);
-putchar('0' + c);
-if ((!(a == 7 && b == 8 && c == 9)))
-{
+putchar((i / 10) + 48);
+putchar((i % 10) + 48);
 putchar(' ');
+putchar((j / 10) + 48);
+putchar((j % 10) + 48);
+if (i != 98 || j != 99)
+{
 putchar(',');
+putchar(' ');
 }
 }
-c++;
 }
-b++;
 }
-a++;
-}
+putchar('\n');
 return (0);
 }
