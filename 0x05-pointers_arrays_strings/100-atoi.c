@@ -2,24 +2,22 @@
 #include <stdio.h>
 
 /**
- * _atoi - converts strings to int
- * @s: first parameter
- *
- * Description: takes all types of char
- * Return: Always(0) Success
- */
+* _atoi - changes a string to an int
+* @s: the string to be changed
+*
+* Return: the converted int
+*/
 int _atoi(char *s)
 {
-int result = 0;
-int sign = 1;
-int i = 0;
-
-if (s[0] == '-')
-{
-sign = -1;
-i++;
-}
-for (; s[i] != '\0'; ++i)
-result = result * 10 + s[i] - '0';
-return (sign *result);
+int i = 1;
+unsigned int num = 0;
+do {
+if (*s == '-')
+i *= -1;
+else if (*s >= '0' && *s <= '9')
+num = num * 10 + (*s - '0');
+else if (num > 0)
+break;
+} while (*s++);
+return (num *i);
 }
