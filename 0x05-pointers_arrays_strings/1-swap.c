@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * a function to swap two integers
+ * swap_int - function to swap two integers
  * @a: the first integer decleared
  * @b: the second integer decleared
  * Return: void
