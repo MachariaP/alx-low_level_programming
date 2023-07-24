@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * strlen -  returns
- * length of a string
- *  *@s: integer entered
+ *_strlen - returns the length of a string
+ *@s: integer entered
  *Return: void
  */
+
 int _strlen(char *s)
 {
 int i;
