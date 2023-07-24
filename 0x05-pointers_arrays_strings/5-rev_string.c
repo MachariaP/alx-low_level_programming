@@ -12,7 +12,6 @@ void rev_string(char *s)
 	int a, b, temp;
 	/* a = begin */
 	/* b = end */
-	
 	a = 0;
 	while(s[a] != '\0')
 	{
