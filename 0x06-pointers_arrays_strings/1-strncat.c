@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 /**
- * _strncat function concatenates two strings
- * @dest : the first part of the string parameter
- * @src : is the second string parameter
- * @n : integer perameter to compare index to
- * Return : returns the concatenated string
- */
-
-char *_strncat(char *dest, char *src, int n)
+*_strncat - concatenates 2 strings
+*@dest: first parameter
+*@src: second parameter
+*@n: size of bytes
+*Return: string dest
+*/
+ 
+ char *_strncat(char *dest, char *src, int n)
 {
 	int index = 0, dest_len = 0;
 
