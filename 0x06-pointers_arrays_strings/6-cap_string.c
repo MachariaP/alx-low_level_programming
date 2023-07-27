@@ -1,32 +1,33 @@
 #include "main.h"
+
 /**
-*cap_string - function that capitalize first character of a word
-*@str: string to capitalize
-*Return:returns the capitalized string
-*/
-char *cap_string(char *str)
+ * cap_string - Capitalizes all words of a string.
+ *
+ * @s: s is the world to be analyzed
+ *
+ * Return: Always 0.
+ */
+char *cap_string(char *s)
 {
-	int index = 0;
+	int i = 0;
 
-	while (str[++index])
+	while (s[i] != '\0')
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-
-		if (str[index - 1] == ' ' ||
-				str[index - 1] == '\t' ||
-				str[index - 1] == '\n' ||
-				str[index - 1] == ',' ||
-				str[index - 1] == ';' ||
-				str[index - 1] == '.' ||
-				str[index - 1] == '!' ||
-				str[index - 1] == '?' ||
-				str[index - 1] == '"' ||
-				str[index - 1] == '(' ||
-				str[index - 1] == ')' ||
-				str[index - 1] == '{' ||
-				str[index - 1] == '}')
-			str[index] -= 32;
+		if (s[0] <= 122 && s[0] >= 97)
+		{
+			s[0] = s[0] - 32;
+		}
+		if (s[i] == 32 || s[i] == 46 || s[i] == '\t' ||
+		    s[i] == '\n' || s[i] == 44 || s[i] == 59 ||
+		    s[i] == '!' || s[i] == '?' || s[i] == '(' ||
+		    s[i] == ')' || s[i] == '{' || s[i] == '}')
+		{
+			if (s[i + 1] <= 122 && s[i + 1] >= 97)
+			{
+				s[i + 1] = s[i + 1] - 32;
+			}
+		}
+		i++;
 	}
-	return (str);
+	return (s);
 }
