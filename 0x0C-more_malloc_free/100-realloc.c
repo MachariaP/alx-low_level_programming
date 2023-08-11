@@ -16,6 +16,7 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
     void *temp_block;
+    unsigned int p;
 
     /*If new_size is equal to zero, and ptr is not NULL, then the call is equivalent to free(ptr)*/
     if(new_size == 0 && ptr != NULL) {
@@ -40,8 +41,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
     /*copy the memory contents from old block to new block*/
     /*use the smaller of old_size and new_size to avoid over-copying*/
-    unsigned int copy_size = (old_size < new_size)? old_size:new_size;
-    memcpy(temp_block, ptr, copy_size);
+    
+	   unsigned int copy_size = (old_size < new_size) ? old_size : new_size;
+	   for(p = 0; p < copy_size; p++){
+	    *((char *)temp_block + p) = *((char *) ptr + p);
+	   }
 
     /*free the old memory block*/
     free(ptr);
