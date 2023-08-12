@@ -1,6 +1,10 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+/* Custom min macro for unsigned int */
+#define MIN(a, b) (((a) < (b)) ? (a) : (b))
 
 /**
  * _realloc - reallocates a memory block using malloc and free
@@ -11,7 +15,7 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size) {
     void *temp_block;
-    unsigned int p;
+    unsigned int i;
 
     /* If new_size is equal to zero, and ptr is not NULL, then the call is equivalent to free(ptr) */
     if (new_size == 0 && ptr != NULL) {
@@ -36,9 +40,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size) {
         if (temp_block != NULL) {
             /* Copy the memory contents from the old block to the new block */
             /* Use the smaller of old_size and new_size to avoid over-copying */
-            unsigned int copy_size = (old_size < new_size) ? old_size : new_size;
-            for (p = 0; p < copy_size; p++) {
-                *((char *)temp_block + p) = *((char *)ptr + p);
+            unsigned int copy_size = MIN(old_size, new_size);
+            for (i = 0; i < copy_size; i++) {
+                *((char *)temp_block + i) = *((char *)ptr + i);
             }
 
             /* Free the old memory block */
