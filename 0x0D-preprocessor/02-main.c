@@ -1,8 +1,13 @@
 #include <stdio.h>
 
-int main()
-{
-	printf("Compiled from: %s\n", __FILE__);
+/**
+ * main - prints the name of the
+ * file it was compiled from
+ * Return: returns nothing
+ */
 
-	return 0;
+int main(void)
+{
+	printf("%s\n", __FILE__);
+	return (0);
 }
