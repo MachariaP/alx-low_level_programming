@@ -12,10 +12,10 @@ size_t print_list(const list_t *h)
     const list_t *current = h;
     size_t node_count = 0;
 
-    /* Traverse the list while the current node is not NULL */
+    
     while (current != NULL)
     {
-        /* Check if the string value of the current node is not NULL */
+        
         if (current->str != NULL)
         {
             printf("[%d] %s\n", current->len, current->str);
