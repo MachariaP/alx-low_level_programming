@@ -1,23 +1,21 @@
 #include "lists.h"
 
 /**
- *print_listint - prints all elements of a list
- *@h: pointer to the first element
- *Return: number of nodes
+ * print_listint - prints all the elements of a linked list
+ * @h: linked list of type listint_t to print
+ *
+ * Return: number of nodes
  */
-
 size_t print_listint(const listint_t *h)
 {
-	size_t count = 0;
+	size_t num = 0;
 
-	while (h != NULL)
+	while (h)
 	{
-		if (h->n == '\0')
-			printf("[0] (nil)\n");
-		else
-			printf("%d\n", h->n);
+		printf("%d\n", h->n);
+		num++;
 		h = h->next;
-		count++;
 	}
-	return (count);
+
+	return (num);
 }
