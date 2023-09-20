@@ -79,4 +79,14 @@ ssize_t read_textfile(const char *filename, size_t letters);
 - If `filename` is NULL, it returns 0.
 - If the write operation fails or does not write the expected amount of bytes, it returns 0.
 
+## Task 1: Under the Snow
+
+
+### Prototype
+
+```c
+int create_file(const char *filename, char *text_content);
+
+```
+## Description
 
