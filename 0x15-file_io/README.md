@@ -62,26 +62,21 @@ In this project, you will learn:
 - All your header files should be include guarded.
 - Tip: always prefer using symbolic constants (POSIX) vs. numbers when it makes sense. For instance, `read(STDIN_FILENO, ...` vs. `read(0, ...`.
 
-## Task 0: Tread lightly, she is near
+# Task 0: Tread Lightly, She Is Near
 
-Function read_textfile(filename, letters):
-    # Read a text file and print it to standard output
-    # with specified number of letters.
-    Input: 
-        - filename: A string containing the name of the file to read.
-        - letters: An integer representing the number of letters to read.
-    Output:
-        - Return the actual number of letters read and printed.
-        - Return 0 if the file cannot be opened, read, or if write fails.
-        - Return 0 if filename is NULL.
-    Implementation:
-        1. If filename is NULL, return 0.
-        2. Open the file specified by filename in read mode.
-        3. If the file cannot be opened, return 0.
-        4. Initialize a buffer of size letters.
-        5. Read letters number of characters from the file into the buffer.
-        6. If read fails or does not read the expected amount of bytes, return 0.
-        7. Print the contents of the buffer to standard output.
-        8. Close the file.
-        9. Return the number of letters read and printed.
+## Prototype
+
+```c
+ssize_t read_textfile(const char *filename, size_t letters);
+```
+# Read Text File and Print to POSIX Standard Output
+
+## Description
+
+- `letters` represents the number of letters it should read and print.
+- The function returns the actual number of letters it could read and print.
+- If the file cannot be opened or read, it returns 0.
+- If `filename` is NULL, it returns 0.
+- If the write operation fails or does not write the expected amount of bytes, it returns 0.
+
 
