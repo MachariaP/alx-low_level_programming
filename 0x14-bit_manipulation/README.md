@@ -51,6 +51,7 @@ At the end of this project, you are expected to be able to  [explain to anyone](
 -   The prototypes of all your functions and the prototype of the function  `_putchar`  should be included in your header file called  `main.h`
 -   Don’t forget to push your header file
 -   All your header files should be include guarded
+  
 
 
 
@@ -113,6 +114,7 @@ julien@ubuntu:~/0x14. Binary$
 
 
 
+
 ### 1. 1
 
 mandatory
@@ -168,6 +170,7 @@ julien@ubuntu:~/0x14. Binary$
 
 
 
+
 ### 2. 10
 
 mandatory
@@ -214,6 +217,7 @@ julien@ubuntu:~/0x14. Binary$
 -   GitHub repository:  `alx-low_level_programming`
 -   Directory:  `0x14-bit_manipulation`
 -   File:  `2-get_bit.c`
+
 
 
 
@@ -269,6 +273,7 @@ julien@ubuntu:~/0x14. Binary$
 
 
 
+
 ### 4. 100
 
 mandatory
@@ -321,6 +326,7 @@ julien@ubuntu:~/0x14. Binary$
 
 
 
+
 ### 5. 101
 
 mandatory
@@ -369,6 +375,7 @@ julien@ubuntu:~/0x14. Binary$
 -   GitHub repository:  `alx-low_level_programming`
 -   Directory:  `0x14-bit_manipulation`
 -   File:  `5-flip_bits.c`
+
 
 
 
@@ -424,6 +431,7 @@ julien@ubuntu:~/0x14. Binary$
 -   GitHub repository:  `alx-low_level_programming`
 -   Directory:  `0x14-bit_manipulation`
 -   File:  `100-get_endianness.c`
+
 
 
 
