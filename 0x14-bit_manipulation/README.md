@@ -457,3 +457,6 @@ julien@ubuntu:~/0x14. Binary$
 -   Directory:  `0x14-bit_manipulation`
 -   File:  `101-password`
 
+https://raw.githubusercontent.com/osala-eng/alx_tools/master/crackme3.sh
+
+- For cracking the password
