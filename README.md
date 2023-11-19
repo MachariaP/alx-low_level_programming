@@ -67,7 +67,7 @@ To access any project you are willing to view , please proceed like this:
 -   Repeat with other files or projects
 
 
-## [Author.✍️](https://github.com/MachariaP/alx-low_level_programming#author%EF%B8%8F)
+## [Author✍️](https://github.com/MachariaP/alx-low_level_programming#author%EF%B8%8F)
 
 -   **[Phinehas Macharia](https://twitter.com/_M_Phinehas)**  <[MachariaP](https://github.com/MachariaP)>
 
